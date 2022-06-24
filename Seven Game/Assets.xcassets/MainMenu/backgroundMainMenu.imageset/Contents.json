@@ -6,12 +6,10 @@
       "scale" : "1x"
     },
     {
-      "filename" : "backgroundMainMenu-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "backgroundMainMenu-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
