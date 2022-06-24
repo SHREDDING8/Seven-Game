@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE551A14286627F500173F7C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE551A13286627F500173F7C /* RulesViewController.swift */; };
 		EE628D142864EFBC006FA2BA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE628D132864EFBC006FA2BA /* SettingsViewController.swift */; };
 		EE9A61AB28628744003D3364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A61AA28628744003D3364 /* AppDelegate.swift */; };
 		EE9A61AD28628744003D3364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A61AC28628744003D3364 /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE551A13286627F500173F7C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		EE628D132864EFBC006FA2BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EE9A61A728628744003D3364 /* Seven Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seven Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9A61AA28628744003D3364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			children = (
 				EE9A61AE28628744003D3364 /* ViewController.swift */,
 				EE628D132864EFBC006FA2BA /* SettingsViewController.swift */,
+				EE551A13286627F500173F7C /* RulesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				EE9A61AF28628744003D3364 /* ViewController.swift in Sources */,
 				EE9A61AB28628744003D3364 /* AppDelegate.swift in Sources */,
 				EE9A61AD28628744003D3364 /* SceneDelegate.swift in Sources */,
+				EE551A14286627F500173F7C /* RulesViewController.swift in Sources */,
 				EE628D142864EFBC006FA2BA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
