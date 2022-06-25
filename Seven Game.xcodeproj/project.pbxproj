@@ -15,6 +15,7 @@
 		EE9A61B228628744003D3364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9A61B028628744003D3364 /* Main.storyboard */; };
 		EE9A61B428628746003D3364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9A61B328628746003D3364 /* Assets.xcassets */; };
 		EE9A61B728628746003D3364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9A61B528628746003D3364 /* LaunchScreen.storyboard */; };
+		EEA5A8A928663FC70059666B /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5A8A828663FC60059666B /* Rules.swift */; };
 		EEC6769F286501D100FA7EA9 /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		EE9A61B328628746003D3364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9A61B628628746003D3364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9A61B828628746003D3364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA5A8A828663FC60059666B /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */,
+				EEA5A8A828663FC60059666B /* Rules.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				EE9A61AB28628744003D3364 /* AppDelegate.swift in Sources */,
 				EE9A61AD28628744003D3364 /* SceneDelegate.swift in Sources */,
 				EE551A14286627F500173F7C /* RulesViewController.swift in Sources */,
+				EEA5A8A928663FC70059666B /* Rules.swift in Sources */,
 				EE628D142864EFBC006FA2BA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

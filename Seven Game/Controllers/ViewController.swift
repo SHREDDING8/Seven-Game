@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController,Language{
     //MARK: - my constants
     let userDefaults = UserDefaults.standard
     
@@ -18,16 +18,20 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var rulesButtonOutlet: UIButton!
     
-
+    @IBOutlet weak var buttonPlay: UIImageView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.        
+        // Do any additional setup after loading the view.
+        
+        // set settings for button  play
+        playButtonSettings()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(viewWillAppear)
         checkLanguage()
         
     }
@@ -46,6 +50,7 @@ class ViewController: UIViewController{
         
     }
     
+
     
     func changeRussianLanguage(){
         rulesButtonOutlet.setTitle("Правила", for: .normal)
@@ -55,11 +60,15 @@ class ViewController: UIViewController{
     }
     
     
-    @IBAction func test(_ sender: Any) {
-//        self.dismiss(animated: true)
+    //MARK: - play button settings
+    
+    func playButtonSettings(){
+        print("playButtonSettings")
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.startGameWindowTransition))
+        self.buttonPlay.addGestureRecognizer(gesture)
     }
-    
-    
-
+    @objc func startGameWindowTransition(){
+        print("nextwindow")
+    }
 }
 

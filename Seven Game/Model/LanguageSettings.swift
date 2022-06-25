@@ -9,6 +9,16 @@ import Foundation
 import UIKit
 
 
+protocol Language{
+    var languageSettings:LanguageSettings{get}
+    
+    func checkLanguage()
+    func changeRussianLanguage()
+    func changeEnglishLanguage()
+}
+
+
+
 class LanguageSettings{
     private let userDefaults =  UserDefaults.standard
     public var currentLanguage:Language = .Russian

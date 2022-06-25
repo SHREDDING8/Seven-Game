@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "шестеркабуби (2).png",
+      "filename" : "тубуби.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "шестеркабуби (2)-1.png",
+      "filename" : "тубуби-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "шестеркабуби (2)-2.png",
+      "filename" : "тубуби-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -5,7 +5,8 @@
 //  Created by SHREDDING on 22.06.2022.
 //
 
-import UIKit@main
+import UIKit
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

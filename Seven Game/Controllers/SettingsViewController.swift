@@ -17,17 +17,12 @@ class SettingsViewController: UIViewController{
     @IBOutlet weak var backgroundUIView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // add tap action on view to close scene
         settingsBackgound()
-
-        // Do any additional setup after loading the view.
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let storyvoard = UIStoryboard(name: "Main", bundle: nil)
-        let asd = storyvoard.instantiateViewController(withIdentifier: "MainMenuViewController")
-        asd.dismiss(animated: true)
     }
     
     //MARK: - My funcs
