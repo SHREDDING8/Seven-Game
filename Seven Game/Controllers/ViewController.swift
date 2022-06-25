@@ -50,7 +50,6 @@ class ViewController: UIViewController,Language{
         
     }
     
-
     
     func changeRussianLanguage(){
         rulesButtonOutlet.setTitle("Правила", for: .normal)
@@ -63,7 +62,6 @@ class ViewController: UIViewController,Language{
     //MARK: - play button settings
     
     func playButtonSettings(){
-        print("playButtonSettings")
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.startGameWindowTransition))
         self.buttonPlay.addGestureRecognizer(gesture)
     }

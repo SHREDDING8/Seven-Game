@@ -19,7 +19,6 @@ class RulesViewController: UIViewController, Language {
     @IBOutlet weak var rulesLabelOutlet: UILabel!
     
     
-    
     //rules
     @IBOutlet weak var RuleLabel2: UILabel!
     
@@ -136,6 +135,9 @@ class RulesViewController: UIViewController, Language {
             
             rule?.layer.masksToBounds = masksToBounds
             rule?.layer.cornerRadius = cornerRadius
+            rule?.shadowColor = UIColor.systemYellow
+            rule?.shadowOffset.width = 2.0
+            rule?.shadowOffset.height = 2.0
             
             indexRule+=1
         }
@@ -159,6 +161,12 @@ class RulesViewController: UIViewController, Language {
         
         RuleLabel15_1.layer.cornerRadius = cornerRadius
         RuleLabel15_2.layer.cornerRadius = cornerRadius
+        
+        RuleLabel15_1.shadowColor = UIColor.systemYellow
+        RuleLabel15_2.shadowColor = UIColor.systemYellow
+        
+        RuleLabel15_1.shadowOffset.width = 2.0
+        RuleLabel15_2.shadowOffset.height = 2.0
     }
     
 
