@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-protocol Language{
+protocol LanguageProtocol{
     var languageSettings:LanguageSettings{get}
     
     func checkLanguage()
@@ -35,9 +35,11 @@ class LanguageSettings{
             
             if (languageAsLanguage(language: userDefaults.string(forKey: userDefaultsKey)!) == .Russian){
                 userDefaults.set(languageAsString(language: Language.English), forKey: userDefaultsKey)
+                currentLanguage = .English
                 
             }else if(languageAsLanguage(language:userDefaults.string(forKey: userDefaultsKey)!) == .English){
                 userDefaults.set(languageAsString(language: Language.Russian) , forKey: userDefaultsKey)
+                currentLanguage = .Russian
             }
         }
     }

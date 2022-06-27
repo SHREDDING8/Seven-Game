@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "тубуби.png",
+      "filename" : "14_1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "тубуби-1.png",
+      "filename" : "14_1-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "тубуби-2.png",
+      "filename" : "14_1-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

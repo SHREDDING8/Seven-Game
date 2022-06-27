@@ -7,11 +7,36 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController{
+class SettingsViewController: UIViewController,LanguageProtocol{
+    
+    
+    
+    //MARK: - Outlets
+    @IBOutlet weak var languageChangeButtonOutlet: UIButton!
+    
     
     //MARK: - my constants
     //language
     let languageSettings = LanguageSettings()
+    
+    func checkLanguage() {
+        if languageSettings.checkLanguage() == false{
+            switch languageSettings.currentLanguage{
+            case .Russian:
+                changeRussianLanguage()
+            case .English:
+                changeEnglishLanguage()
+            }
+        }
+    }
+    
+    func changeRussianLanguage() {
+        languageChangeButtonOutlet.setTitle("🇷🇺 RU", for: .normal)
+    }
+    
+    func changeEnglishLanguage() {
+        languageChangeButtonOutlet.setTitle("🇬🇧 EN", for: .normal)
+    }
     
 
     @IBOutlet weak var backgroundUIView: UIView!
@@ -23,6 +48,7 @@ class SettingsViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        checkLanguage()
     }
     
     //MARK: - My funcs
@@ -42,6 +68,14 @@ class SettingsViewController: UIViewController{
     
     @IBAction func testLanguageButton(_ sender: Any) {
         languageSettings.changeLanguage()
+        switch self.languageSettings.currentLanguage{
+        case .Russian:
+            languageChangeButtonOutlet.setTitle("🇷🇺 RU", for: .normal)
+        case .English:
+            languageChangeButtonOutlet.setTitle("🇬🇧 EN", for: .normal)
+            
+        }
+        
     }
     
     @IBAction func TestCloseButton(_ sender: UIButton) {

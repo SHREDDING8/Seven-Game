@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,Language{
+class ViewController: UIViewController,LanguageProtocol{
     //MARK: - my constants
     let userDefaults = UserDefaults.standard
     
@@ -16,6 +16,7 @@ class ViewController: UIViewController,Language{
     
     //MARK: -  Outlets
     
+    @IBOutlet weak var versionOutlet: UILabel!
     @IBOutlet weak var rulesButtonOutlet: UIButton!
     
     @IBOutlet weak var buttonPlay: UIImageView!
@@ -28,6 +29,9 @@ class ViewController: UIViewController,Language{
         
         // set settings for button  play
         playButtonSettings()
+        
+        versionOutlet.layer.masksToBounds = true
+        versionOutlet.layer.cornerRadius = 14
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +70,17 @@ class ViewController: UIViewController,Language{
         self.buttonPlay.addGestureRecognizer(gesture)
     }
     @objc func startGameWindowTransition(){
-        print("nextwindow")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let gameWindow = storyboard.instantiateViewController(withIdentifier: "GameViewController")
+        self.present(gameWindow, animated: true)
     }
+    
+    
+    
+    
+    @IBAction func versionSwitchAction(_ sender: UISwitch) {
+    }
+    
 }
+
 

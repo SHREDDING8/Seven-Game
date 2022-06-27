@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "десяткабуби.png",
+      "filename" : "10_1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "десяткабуби-1.png",
+      "filename" : "10_1-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "десяткабуби-2.png",
+      "filename" : "10_1-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

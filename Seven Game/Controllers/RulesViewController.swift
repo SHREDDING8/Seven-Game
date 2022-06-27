@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RulesViewController: UIViewController, Language {
+class RulesViewController: UIViewController, LanguageProtocol {
 
     //MARK: - Outlets
     
@@ -135,9 +135,11 @@ class RulesViewController: UIViewController, Language {
             
             rule?.layer.masksToBounds = masksToBounds
             rule?.layer.cornerRadius = cornerRadius
-            rule?.shadowColor = UIColor.systemYellow
-            rule?.shadowOffset.width = 2.0
-            rule?.shadowOffset.height = 2.0
+            rule?.shadowColor = .systemYellow
+            rule?.shadowOffset.width = 1.0
+            rule?.shadowOffset.height = 1.0
+            
+            rule?.textColor = .brown
             
             indexRule+=1
         }
