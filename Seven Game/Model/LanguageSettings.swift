@@ -29,7 +29,6 @@ class LanguageSettings{
         case English
     }
     
-    
     public func changeLanguage(){
         if (userDefaults.object(forKey: userDefaultsKey) != nil){
             

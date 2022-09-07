@@ -21,6 +21,7 @@ class ViewController: UIViewController,LanguageProtocol{
     
     @IBOutlet weak var buttonPlay: UIImageView!
     
+    @IBOutlet weak var addPlayersButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -57,9 +58,15 @@ class ViewController: UIViewController,LanguageProtocol{
     
     func changeRussianLanguage(){
         rulesButtonOutlet.setTitle("Правила", for: .normal)
+        versionOutlet.text = "Обычная версия"
+        
+        addPlayersButton.setTitle("Добавить игроков", for: .normal)
     }
     func changeEnglishLanguage(){
         rulesButtonOutlet.setTitle("Rules", for: .normal)
+        versionOutlet.text = "Default version"
+        
+        addPlayersButton.setTitle("Add players", for: .normal)
     }
     
     
@@ -70,15 +77,60 @@ class ViewController: UIViewController,LanguageProtocol{
         self.buttonPlay.addGestureRecognizer(gesture)
     }
     @objc func startGameWindowTransition(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let gameWindow = storyboard.instantiateViewController(withIdentifier: "GameViewController")
-        self.present(gameWindow, animated: true)
+        var alertTitle:String
+        var actionTitle:String
+        
+        switch languageSettings.currentLanguage{
+        case .Russian:
+            alertTitle = "Добавьте как минимум одного игрока"
+            actionTitle = "Добавить"
+        case .English:
+            alertTitle = "Add at least one player"
+            actionTitle = "Add"
+        }
+        
+        if Game.players.count == 0{
+            let alert = UIAlertController(title: alertTitle, message:nil , preferredStyle: .alert)
+            let action = UIAlertAction(title: actionTitle, style: .default) { _ in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let gameWindow = storyboard.instantiateViewController(withIdentifier: "AddPlayersViewController")
+                self.navigationController?.pushViewController(gameWindow, animated: true)
+            }
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        }else{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let gameWindow = storyboard.instantiateViewController(withIdentifier: "GameViewController")
+            self.present(gameWindow, animated: true)
+        }
     }
     
     
     
     
     @IBAction func versionSwitchAction(_ sender: UISwitch) {
+        
+        var defaultVersion:String
+        var extendedVersion:String
+        
+        switch languageSettings.currentLanguage{
+        case .Russian:
+            defaultVersion = "Обычная версия"
+            extendedVersion = "Расширенная версия"
+        case .English:
+            defaultVersion = "Default version"
+            extendedVersion = "Extended version"
+            
+        }
+        
+        if sender.isOn{
+            versionOutlet.text = extendedVersion
+            Game.mode = .Extended
+        }else{
+            versionOutlet.text = defaultVersion
+            Game.mode = .Default
+        }
+        
     }
     
 }

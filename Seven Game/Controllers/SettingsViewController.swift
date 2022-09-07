@@ -76,6 +76,10 @@ class SettingsViewController: UIViewController,LanguageProtocol{
             
         }
         
+        exit(0)
+        
+        
+        
     }
     
     @IBAction func TestCloseButton(_ sender: UIButton) {
