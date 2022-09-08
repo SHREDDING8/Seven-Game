@@ -45,24 +45,6 @@ class AddPlayersViewController: UIViewController {
         createAlert()
     }
     
-    
-}
-
-
-extension AddPlayersViewController:LanguageProtocol{
-    
-    
-    func checkLanguage() {
-        if languageSettings.checkLanguage() == false{
-            switch languageSettings.currentLanguage{
-            case .Russian:
-                changeRussianLanguage()
-            case .English:
-                changeEnglishLanguage()
-            }
-        }
-    }
-    
     func changeRussianLanguage() {
         navItemOutlet.title = "Список игроков"
     }
@@ -71,8 +53,22 @@ extension AddPlayersViewController:LanguageProtocol{
         navItemOutlet.title = "Players list"
     }
     
-    
 }
+
+
+extension AddPlayersViewController{
+    
+    
+    func checkLanguage() {
+            switch currentLanguage{
+            case .Russian:
+                changeRussianLanguage()
+            case .English:
+                changeEnglishLanguage()
+            }
+        }
+    }
+    
 
 extension AddPlayersViewController{
     //MARK: - my Funcs
@@ -85,7 +81,7 @@ extension AddPlayersViewController{
         
         var titleActioncancel:String
         
-        switch languageSettings.currentLanguage{
+        switch currentLanguage{
         case .Russian:
             title = "Новый Игрок"
             message = "Введи имя"
@@ -153,7 +149,7 @@ extension AddPlayersViewController:UITableViewDelegate{
         
         var title:String
         
-        switch languageSettings.currentLanguage{
+        switch currentLanguage{
         case .Russian:
             title = "Удалить"
         

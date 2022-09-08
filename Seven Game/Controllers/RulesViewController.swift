@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RulesViewController: UIViewController, LanguageProtocol {
+class RulesViewController: UIViewController {
 
     //MARK: - Outlets
     
@@ -62,7 +62,7 @@ class RulesViewController: UIViewController, LanguageProtocol {
         super.viewDidLoad()
         //set text and corner radius
         self.rulesSet(.Russian)
-        self.languageSettings.currentLanguage = .Russian
+//        self.languageSettings.currentLanguage = .Russian
 
         // Do any additional setup after loading the view.
     }
@@ -77,14 +77,12 @@ class RulesViewController: UIViewController, LanguageProtocol {
     //MARK: - language
     
     func checkLanguage(){
-        if languageSettings.checkLanguage() == false{
-            switch languageSettings.currentLanguage{
+            switch currentLanguage{
             case .Russian:
                 changeRussianLanguage()
             case .English:
                 changeEnglishLanguage()
             }
-        }
         
     }
     
@@ -104,7 +102,7 @@ class RulesViewController: UIViewController, LanguageProtocol {
     
     //MARK: - My funcs
     
-    func rulesSet(_ language:LanguageSettings.Language){
+    func rulesSet(_ language:Language){
         let RulesLabels = [
             RuleLabel2,
             RuleLabel3,

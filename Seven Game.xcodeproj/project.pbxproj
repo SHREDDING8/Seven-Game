@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE24C8B828C9F63A001BB161 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */; };
+		EE24C8BA28C9F951001BB161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8B928C9F951001BB161 /* Constants.swift */; };
+		EE24C8BD28CA000A001BB161 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8BC28CA000A001BB161 /* LanguageTableViewCell.swift */; };
+		EE24C8C028CA3B2E001BB161 /* LanguageChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8BF28CA3B2E001BB161 /* LanguageChoose.swift */; };
+		EE24C8C228CA3B3F001BB161 /* ModeChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */; };
+		EE24C8C428CA3E25001BB161 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C328CA3E25001BB161 /* LanguageCell.swift */; };
 		EE551A14286627F500173F7C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE551A13286627F500173F7C /* RulesViewController.swift */; };
 		EE628D142864EFBC006FA2BA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE628D132864EFBC006FA2BA /* SettingsViewController.swift */; };
 		EE83E38D28687F5C001A6100 /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83E38C28687F5C001A6100 /* AddPlayersViewController.swift */; };
@@ -24,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		EE24C8B928C9F951001BB161 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE24C8BC28CA000A001BB161 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
+		EE24C8BF28CA3B2E001BB161 /* LanguageChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageChoose.swift; sourceTree = "<group>"; };
+		EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChoose.swift; sourceTree = "<group>"; };
+		EE24C8C328CA3E25001BB161 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		EE551A13286627F500173F7C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		EE628D132864EFBC006FA2BA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EE83E38C28687F5C001A6100 /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
@@ -55,9 +67,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE24C8BB28C9FFF1001BB161 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				EE24C8BC28CA000A001BB161 /* LanguageTableViewCell.swift */,
+				EE24C8C328CA3E25001BB161 /* LanguageCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		EE24C8BE28CA3AFA001BB161 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */,
+				EE24C8BF28CA3B2E001BB161 /* LanguageChoose.swift */,
+				EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		EE628D122864EF8C006FA2BA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE24C8BE28CA3AFA001BB161 /* Settings */,
+				EE24C8BB28C9FFF1001BB161 /* cells */,
 				EE9A61AE28628744003D3364 /* ViewController.swift */,
 				EE628D132864EFBC006FA2BA /* SettingsViewController.swift */,
 				EE551A13286627F500173F7C /* RulesViewController.swift */,
@@ -114,6 +147,7 @@
 				EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */,
 				EEA5A8A828663FC60059666B /* Rules.swift */,
 				EE83E38E2868980F001A6100 /* Game.swift */,
+				EE24C8B928C9F951001BB161 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,16 +223,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE24C8C028CA3B2E001BB161 /* LanguageChoose.swift in Sources */,
+				EE24C8C428CA3E25001BB161 /* LanguageCell.swift in Sources */,
 				EEDC8D932869CB0C000ACDD7 /* GameViewController.swift in Sources */,
 				EEC6769F286501D100FA7EA9 /* LanguageSettings.swift in Sources */,
 				EE83E38F2868980F001A6100 /* Game.swift in Sources */,
+				EE24C8B828C9F63A001BB161 /* SettingsTableViewController.swift in Sources */,
 				EE83E38D28687F5C001A6100 /* AddPlayersViewController.swift in Sources */,
 				EE9A61AF28628744003D3364 /* ViewController.swift in Sources */,
+				EE24C8BD28CA000A001BB161 /* LanguageTableViewCell.swift in Sources */,
 				EE9A61AB28628744003D3364 /* AppDelegate.swift in Sources */,
+				EE24C8C228CA3B3F001BB161 /* ModeChoose.swift in Sources */,
 				EE9A61AD28628744003D3364 /* SceneDelegate.swift in Sources */,
 				EE551A14286627F500173F7C /* RulesViewController.swift in Sources */,
 				EEA5A8A928663FC70059666B /* Rules.swift in Sources */,
 				EE628D142864EFBC006FA2BA /* SettingsViewController.swift in Sources */,
+				EE24C8BA28C9F951001BB161 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

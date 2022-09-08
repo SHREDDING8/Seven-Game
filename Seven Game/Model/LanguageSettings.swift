@@ -8,77 +8,45 @@
 import Foundation
 import UIKit
 
+public enum Language:String{
+    case Russian = "Русский"
+    case English = "English"
+}
+
 
 protocol LanguageProtocol{
-    var languageSettings:LanguageSettings{get}
     
-    func checkLanguage()
-    func changeRussianLanguage()
-    func changeEnglishLanguage()
+    func setLanguage(language:Language)
+    func loadLanguage()
 }
 
 
 
-class LanguageSettings{
+class LanguageSettings:LanguageProtocol{
+
+    
     private let userDefaults =  UserDefaults.standard
-    public var currentLanguage:Language = .Russian
-    private let userDefaultsKey = "Language"
     
-    public enum Language{
-        case Russian
-        case English
+    
+    func setLanguage(language: Language) {
+        userDefaults.set(language.rawValue, forKey: userDefaultsKeyForLanguage)
+        currentLanguage = language
     }
     
-    public func changeLanguage(){
-        if (userDefaults.object(forKey: userDefaultsKey) != nil){
-            
-            if (languageAsLanguage(language: userDefaults.string(forKey: userDefaultsKey)!) == .Russian){
-                userDefaults.set(languageAsString(language: Language.English), forKey: userDefaultsKey)
-                currentLanguage = .English
-                
-            }else if(languageAsLanguage(language:userDefaults.string(forKey: userDefaultsKey)!) == .English){
-                userDefaults.set(languageAsString(language: Language.Russian) , forKey: userDefaultsKey)
+    internal func loadLanguage() {
+        let languageFromUserDefaults = userDefaults.string(forKey: userDefaultsKeyForLanguage)
+        
+        switch languageFromUserDefaults{
+            case Language.Russian.rawValue:
                 currentLanguage = .Russian
-            }
+        case Language.English.rawValue:
+            currentLanguage = .English
+            
+        case .none:
+            currentLanguage = .Russian
+            setLanguage(language: .Russian)
+        case .some(_):
+            break
         }
-    }
-
-    
-    public func setLanguage(){
-        if (userDefaults.object(forKey: userDefaultsKey) == nil){
-            userDefaults.set(languageAsString(language: Language.Russian), forKey: userDefaultsKey)
-        }
-    }
-
-    public func checkLanguage()->Bool{
-        if (self.languageAsLanguage(language: userDefaults.string(forKey: userDefaultsKey)!) != currentLanguage){
-            currentLanguage = self.languageAsLanguage(language: userDefaults.string(forKey: userDefaultsKey)!)
-            return false
-        }else{
-            return true
-        }
-    }
-    
-    private func languageAsString(language:Language)->String{
-        var resultString = ""
-        
-        switch language{
-        case .Russian:
-            resultString = "Russian"
-        case .English:
-            resultString = "English"
-        }
-        return resultString
-    }
-    private func languageAsLanguage(language:String)->Language{
-        var result:Language = .Russian
-        
-        if (language == "Russian"){result = .Russian}
-        if (language == "English"){result = .English}
-        
-        return result
-    }
-    
-    
-    
+    }    
 }

@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController,LanguageProtocol{
+class ViewController: UIViewController{
     //MARK: - my constants
     let userDefaults = UserDefaults.standard
     
     //language
-    let languageSettings = LanguageSettings()
     
     //MARK: -  Outlets
     
@@ -43,16 +42,12 @@ class ViewController: UIViewController,LanguageProtocol{
     //MARK: - Language
     
     func checkLanguage(){
-        if languageSettings.checkLanguage() == false{
-            switch languageSettings.currentLanguage{
+            switch currentLanguage{
             case .Russian:
                 changeRussianLanguage()
             case .English:
                 changeEnglishLanguage()
             }
-            
-        }
-        
     }
     
     
@@ -80,7 +75,7 @@ class ViewController: UIViewController,LanguageProtocol{
         var alertTitle:String
         var actionTitle:String
         
-        switch languageSettings.currentLanguage{
+        switch currentLanguage{
         case .Russian:
             alertTitle = "Добавьте как минимум одного игрока"
             actionTitle = "Добавить"
@@ -113,7 +108,7 @@ class ViewController: UIViewController,LanguageProtocol{
         var defaultVersion:String
         var extendedVersion:String
         
-        switch languageSettings.currentLanguage{
+        switch currentLanguage{
         case .Russian:
             defaultVersion = "Обычная версия"
             extendedVersion = "Расширенная версия"

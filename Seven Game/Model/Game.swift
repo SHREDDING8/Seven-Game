@@ -32,7 +32,7 @@ protocol GameProtocol{
 
 class Game:GameProtocol{
     
-    var language:LanguageSettings.Language
+    var language:Language
     
     static var mode:Mode = .Default
 
@@ -121,7 +121,7 @@ class Game:GameProtocol{
         }
     }
     
-    init(mode:Mode,language:LanguageSettings.Language){
+    init(mode:Mode,language:Language){
         self.language = language
         getRandomCards(mode: mode)
         

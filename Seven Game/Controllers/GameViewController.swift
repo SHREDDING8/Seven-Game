@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController,LanguageProtocol {
+class GameViewController: UIViewController {
     var languageSettings = LanguageSettings()
     
     var game:Game!
@@ -42,14 +42,14 @@ class GameViewController: UIViewController,LanguageProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkLanguage()
-        game = Game(mode: Game.mode,language: languageSettings.currentLanguage)
+        game = Game(mode: Game.mode,language: currentLanguage)
         startSettings()
     }
     
     @objc func round(){
         if game.isEnded{
             UIView.transition(with: self.cardImage, duration: 0.5, options: .transitionCrossDissolve) {
-                if self.languageSettings.currentLanguage == .Russian{
+                if currentLanguage == .Russian{
                         self.theEndGame.setTitle("Начать заново", for: .normal)
                     }else{
                         self.theEndGame.setTitle("Restart game", for: .normal)
@@ -78,7 +78,7 @@ class GameViewController: UIViewController,LanguageProtocol {
             game.restartGame(mode: Game.mode)
             startSettings()
             
-            switch languageSettings.currentLanguage{
+            switch currentLanguage{
             case .Russian:
                 changeRussianLanguage()
             case .English:
@@ -114,14 +114,13 @@ extension GameViewController{
 extension GameViewController{
     
     func checkLanguage() {
-        if languageSettings.checkLanguage() == false{
-            switch languageSettings.currentLanguage{
+            switch currentLanguage{
             case .Russian:
                 changeRussianLanguage()
             case .English:
                 changeEnglishLanguage()
             }
-        }
+        
     }
     
     func changeRussianLanguage() {

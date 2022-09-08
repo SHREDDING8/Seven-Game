@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Settings language
         
         let languageSettings = LanguageSettings()
-        languageSettings.setLanguage()
+        languageSettings.loadLanguage()
         return true
     }
 

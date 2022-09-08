@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController,LanguageProtocol{
+class SettingsViewController: UIViewController{
     
     
     
@@ -20,14 +20,12 @@ class SettingsViewController: UIViewController,LanguageProtocol{
     let languageSettings = LanguageSettings()
     
     func checkLanguage() {
-        if languageSettings.checkLanguage() == false{
-            switch languageSettings.currentLanguage{
+            switch currentLanguage{
             case .Russian:
                 changeRussianLanguage()
             case .English:
                 changeEnglishLanguage()
             }
-        }
     }
     
     func changeRussianLanguage() {
@@ -67,8 +65,7 @@ class SettingsViewController: UIViewController,LanguageProtocol{
     //MARK: - Actions
     
     @IBAction func testLanguageButton(_ sender: Any) {
-        languageSettings.changeLanguage()
-        switch self.languageSettings.currentLanguage{
+        switch currentLanguage{
         case .Russian:
             languageChangeButtonOutlet.setTitle("🇷🇺 RU", for: .normal)
         case .English:
