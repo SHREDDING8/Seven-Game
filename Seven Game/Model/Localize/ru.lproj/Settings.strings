@@ -21,3 +21,14 @@
 
 
 //MARK: -  Adding Players Table
+
+"editButtonTitleAddingPlayers" = "Изменить";
+"doneButtonTitleAddingPlayers" = "Готово";
+
+"titleAlertAddingPlayers" = "Новый Игрок";
+"messageAlertAddingPlayers" = "Введи имя";
+"titleActionAddAlertAddingPlayers" = "Добавить";
+"titleActioncancelAlertAddingPlayers" = "Отмена";
+
+
+

@@ -21,3 +21,11 @@
 "playersLabel" = "Players";
 
 //MARK: -  Adding Players Table
+
+"editButtonTitleAddingPlayers" = "Edit";
+"doneButtonTitleAddingPlayers" = "Done";
+
+"titleAlertAddingPlayers" = "New player";
+"messageAlertAddingPlayers" = "Enter name";
+"titleActionAddAlertAddingPlayers" = "Add";
+"titleActioncancelAlertAddingPlayers" = "Cancel";

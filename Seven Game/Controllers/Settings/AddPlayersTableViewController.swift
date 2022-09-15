@@ -93,6 +93,11 @@ class AddPlayersTableViewController:
         navBar.title = "playersLabel".localize(tableName: settingsLocalizeKeyTable)
         
         
+        // edit Button
+        
+        editButtonOutlet.title = "editButtonTitleAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
+        
+        
         
         if Game.players.count > 0{
             editButtonOutlet.isEnabled = true
@@ -107,19 +112,10 @@ class AddPlayersTableViewController:
         
         var titleActioncancel:String
         
-        switch currentLanguage{
-        case .Russian:
-            title = "Новый Игрок"
-            message = "Введи имя"
-            titleActionAdd = "Добавить"
-            titleActioncancel = "Отмена"
-        
-        case .English:
-            title = "New player"
-            message = "Enter name"
-            titleActionAdd = "Add"
-            titleActioncancel = "Cancel"
-        }
+        title = "titleAlertAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
+        message = "messageAlertAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
+        titleActionAdd = "titleActionAddAlertAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
+        titleActioncancel = "titleActioncancelAlertAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
     
         
         
@@ -159,13 +155,15 @@ class AddPlayersTableViewController:
     }
     
     private func changeTextOfEditButton(_ button:UIBarButtonItem){
-        if button.title == "Edit"{
+        let editText = "editButtonTitleAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
+        let doneText = "doneButtonTitleAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
+        if button.title == editText{
             if Game.players.count != 0{
-            editButtonOutlet.title = "Done"
+            editButtonOutlet.title = doneText
             tableView.isEditing = true
             }
         }else{
-            editButtonOutlet.title = "Edit"
+            editButtonOutlet.title = editText
             tableView.isEditing = false
         }
     }
