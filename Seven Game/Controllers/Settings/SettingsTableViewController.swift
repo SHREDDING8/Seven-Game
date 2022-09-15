@@ -15,7 +15,9 @@ class SettingsTableViewController: UITableViewController {
     
     // MARK: - outlets
     
+    @IBOutlet weak var playersLabel: UILabel!
     
+    @IBOutlet weak var numberOfPlayersLabel: UILabel!
     @IBOutlet weak var gameModeLabel: UILabel!
     
     @IBOutlet weak var languageLabel: UILabel!
@@ -31,7 +33,7 @@ class SettingsTableViewController: UITableViewController {
         
         
 
-        setSettingstableView()
+        configureTableView()
     }
 
     
@@ -39,12 +41,12 @@ class SettingsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return numberOfSectionsOfSettingsPage
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return numberOfRowsInSettingsPage
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -61,52 +63,49 @@ class SettingsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "toSelectMode"{
+            let destination = segue.destination as! ModeChoose
+            destination.doAfterSelect = { [self] in
+                configureTableView()
+            }
+        }else if segue.identifier == "addPlayersSegue"{
+            let destination = segue.destination as! AddPlayersTableViewController
+            destination.doAfterAdd = { [self] in
+                configureTableView()
+            }
+        }
+        
     }
     
     
     // MARK: - myFuncs
     
-    private func setSettingstableView(){
+    private func configureTableView(){
+        // background Table View
         tableView.backgroundView = UIImageView(image: backroundImage)
+        
+        // Nav Bar
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        
-        // languageSettings
-        switch currentLanguage{
-        case .Russian:
-            russianLanguageSettings()
-        case .English:
-            englishLanguageSettings()
-        }
-        
-        // adding bracket to the gamemode language and  cell
-        gameModeLabel.text? += " \u{203A}"
-        languageLabel.text? += " \u{203A}"
-    }
-    
-    
-    private func russianLanguageSettings(){
-        titleNavBar.title = "Настройки"
-        navigationController?.navigationBar.topItem?.title = "Назад"
-        
-        languageNameOfCellLabel.text? = "Язык"
-        languageLabel.text? = currentLanguage.rawValue
-        
-        gameModeLabel.text? = (Game.mode == .Default ? "Обычный" : "Расширенный")
-        gameModeNameOfCellLabel.text? = "Режим"
+        titleNavBar.title = "titleNavBarnameSettings".localize(tableName: settingsLocalizeKeyTable)
         
         
+        // bracket
+        let bracket = " \u{203A}"
+        
+        // Language Cell
+        languageNameOfCellLabel.text? = "labelLanguageSettings".localize(tableName: settingsLocalizeKeyTable)
+        languageLabel.text? = currentLanguage.rawValue + bracket
+        
+        // Mode Cell
+        gameModeNameOfCellLabel.text? = "labelModeSettings".localize(tableName: settingsLocalizeKeyTable)
+        gameModeLabel.text? = modeKeys[currentGameMode]!["title"]!.localize(tableName: settingsLocalizeKeyTable) + bracket
+            
+        
+        
+        // PLayers Cell
+        playersLabel.text? = "playersLabel".localize(tableName: settingsLocalizeKeyTable)
+        numberOfPlayersLabel.text? = String(Game.players.count) + bracket
         
     }
     
-    private func englishLanguageSettings(){
-        titleNavBar.title = "Settings"
-        
-        languageNameOfCellLabel.text? = "Language"
-        languageLabel.text? = currentLanguage.rawValue
-        
-        gameModeLabel.text? = (Game.mode == .Default ? "Default" : "Extended")
-        gameModeNameOfCellLabel.text? = "Mode"
-        
-    }
-
 }

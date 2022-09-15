@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  Seven Game
+
+  Created by SHREDDING on 14.09.2022.
+  
+*/
+
+
+//MARK: -  settingsTableView
+
+"titleNavBarnameSettings" = "Settings";
+"labelLanguageSettings" = "Language";
+"labelModeSettings" = "Mode";
+
+// Modes
+"classicModeTitle" = "Newbie";
+"expertModeTitle" = "Expert";
+
+// Players
+"playersLabel" = "Players";
+
+//MARK: -  Adding Players Table

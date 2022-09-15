@@ -8,10 +8,28 @@
 import Foundation
 import UIKit
 
-enum Mode {
-    case Default
-    case Extended
+public enum Mode:Int {
+    case Default = 0
+    case Extended = 1
 }
+
+
+let modesArray:[Language:[[String:String]]] =
+[
+    .Russian : [
+        ["title" : "Любитель","description": "Ты только начал выпивать или играешь чисто за компанию? Тогда этот режим - то, что тебе нужно. Прочувствуй весь азарт, веселье от проведённого времени вместе с друзьями и алкоголем) Колода из 36 карт, простые правила. Пей и веселись!",],
+        ["title" : "Эксперт","description": "Считаешь себя истинным ценителем алкоголя? Игра тебе уже непонаслышке знакома? тогда играй по усложнённым правилам теперь карт больше - колода из 52 карт. Больше свободы в действиях и больше возможностей выпить) Cheers!",],
+    ],
+    
+    
+    .English : [
+        ["title" : "Newbie","description": "Have you just started drinking or are you playing purely for the company? Then this mode is what you need. Feel all the excitement, fun from your time with friends and alcohol) Deck of 36 cards, simple rules. Drink and have fun!",],
+        ["title" : "Expert","description": "Do you consider yourself a true connoisseur of alcohol? Do you know the game firsthand? Then play by complicated rules. Now there are more cards - a deck of 52 cards. More freedom in action and more opportunities to drink) Cheers!",],
+    ],
+
+]
+
+
 
 protocol GameProtocol{
     static var players: [String]{get}
@@ -34,7 +52,7 @@ class Game:GameProtocol{
     
     var language:Language
     
-    static var mode:Mode = .Default
+    static var mode:Mode = currentGameMode
 
     static var players: [String] = []
         

@@ -42,7 +42,7 @@ class GameViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkLanguage()
-        game = Game(mode: Game.mode,language: currentLanguage)
+        game = Game(mode: currentGameMode ,language: currentLanguage)
         startSettings()
     }
     
