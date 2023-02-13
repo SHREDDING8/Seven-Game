@@ -35,15 +35,14 @@ class ViewController: UIViewController{
      
      */
     @IBAction func startGameWindowTransition(){
-        var alertTitle:String
-        var actionTitle:String
+        let alertTitle = "smallNumberOfPlayersTitle".localize(tableName: "Game")
         
-        alertTitle = "Add at least one player"
-        actionTitle = "Add"
+        let alertmsg = "smallNumberOfPlayersMsg".localize(tableName: "Game")
         
         if Game.players.count == 0{
-            let alert = UIAlertController(title: alertTitle, message:nil , preferredStyle: .alert)
-            let action = UIAlertAction(title: actionTitle, style: .default) { _ in
+            let alert = UIAlertController(title: alertTitle, message:alertmsg , preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "Ok", style: .default) { _ in
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let gameWindow = storyboard.instantiateViewController(withIdentifier: "AddPlayersViewController")
                 self.navigationController?.pushViewController(gameWindow, animated: true)

@@ -11,7 +11,6 @@ class RulesViewController: UIViewController {
 
     //MARK: - Outlets
     
-
     @IBOutlet weak var mainRulesView: UIView!
     @IBOutlet weak var mainRules: UILabel!
     

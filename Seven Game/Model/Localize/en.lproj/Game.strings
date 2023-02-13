@@ -10,3 +10,6 @@
 "endTheGame" = "Game Over";
 "again" = "Play again";
 "finish" = "Finish the game";
+
+"smallNumberOfPlayersTitle" = "Not enough players";
+"smallNumberOfPlayersMsg" = "Add at least one player";

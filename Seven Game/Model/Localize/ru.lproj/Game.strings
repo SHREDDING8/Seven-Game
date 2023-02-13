@@ -10,3 +10,6 @@
 "endTheGame" = "Игра окончена";
 "again" = "Начать заново";
 "finish" = "Закончить игру";
+
+"smallNumberOfPlayersTitle" = "Недостаточно игроков";
+"smallNumberOfPlayersMsg" = "Добавьте хотя бы одного игрока";
