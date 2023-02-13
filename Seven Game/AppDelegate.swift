@@ -15,9 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Settings language
-        
-        let languageSettings = LanguageSettings()
-        languageSettings.loadLanguage()
         return true
     }
 

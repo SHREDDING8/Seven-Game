@@ -14,25 +14,24 @@ public enum Mode:Int {
 }
 
 
-let modesArray:[Language:[[String:String]]] =
-[
-    .Russian : [
-        ["title" : "Любитель","description": "Ты только начал выпивать или играешь чисто за компанию? Тогда этот режим - то, что тебе нужно. Прочувствуй весь азарт, веселье от проведённого времени вместе с друзьями и алкоголем) Колода из 36 карт, простые правила. Пей и веселись!",],
-        ["title" : "Эксперт","description": "Считаешь себя истинным ценителем алкоголя? Игра тебе уже непонаслышке знакома? тогда играй по усложнённым правилам теперь карт больше - колода из 52 карт. Больше свободы в действиях и больше возможностей выпить) Cheers!",],
-    ],
-    
-    
-    .English : [
-        ["title" : "Newbie","description": "Have you just started drinking or are you playing purely for the company? Then this mode is what you need. Feel all the excitement, fun from your time with friends and alcohol) Deck of 36 cards, simple rules. Drink and have fun!",],
-        ["title" : "Expert","description": "Do you consider yourself a true connoisseur of alcohol? Do you know the game firsthand? Then play by complicated rules. Now there are more cards - a deck of 52 cards. More freedom in action and more opportunities to drink) Cheers!",],
-    ],
-
-]
+//let modesArray:[Language:[[String:String]]] =
+//[
+//    .Russian : [
+//        ["title" : "Любитель","description": "Ты только начал выпивать или играешь чисто за компанию? Тогда этот режим - то, что тебе нужно. Прочувствуй весь азарт, веселье от проведённого времени вместе с друзьями и алкоголем) Колода из 36 карт, простые правила. Пей и веселись!",],
+//        ["title" : "Эксперт","description": "Считаешь себя истинным ценителем алкоголя? Игра тебе уже непонаслышке знакома? тогда играй по усложнённым правилам теперь карт больше - колода из 52 карт. Больше свободы в действиях и больше возможностей выпить) Cheers!",],
+//    ],
+//
+//
+//    .English : [
+//        ["title" : "Newbie","description": "Have you just started drinking or are you playing purely for the company? Then this mode is what you need. Feel all the excitement, fun from your time with friends and alcohol) Deck of 36 cards, simple rules. Drink and have fun!",],
+//        ["title" : "Expert","description": "Do you consider yourself a true connoisseur of alcohol? Do you know the game firsthand? Then play by complicated rules. Now there are more cards - a deck of 52 cards. More freedom in action and more opportunities to drink) Cheers!",],
+//    ],
+//
+//]
 
 
 
 protocol GameProtocol{
-    static var players: [String]{get}
     static var mode:Mode{get}
     
     var gameCards:[String]{get}
@@ -50,11 +49,19 @@ protocol GameProtocol{
 
 class Game:GameProtocol{
     
-    var language:Language
     
     static var mode:Mode = currentGameMode
 
-    static var players: [String] = []
+    static var players: [String] = []{
+        didSet{
+            maxPlayer = Game.players.max(by: { String1, String2 in
+                return String1.count < String2.count
+            })?.count
+    }
+}
+                             
+                             
+    static var maxPlayer:Int? = 0
         
     var currentPlayer: Int = 0{
         didSet{
@@ -66,7 +73,7 @@ class Game:GameProtocol{
     var currentCard:Int = 0
     
     var isEnded:Bool{
-        if currentCard == self.gameCards.count{
+        if currentCard > self.gameCards.count{
             return true
         }else{
             return false
@@ -139,30 +146,18 @@ class Game:GameProtocol{
         }
     }
     
-    init(mode:Mode,language:Language){
-        self.language = language
+    init(mode:Mode){
         getRandomCards(mode: mode)
         
     }
     
     
     func round() ->(String,String,UIImage) {
-        var rulesLanguage:[String:String]
         
-        if language == .English{
-            rulesLanguage = Rules.rulesEnglish
-        }else{
-            rulesLanguage = Rules.rulesRussian
-        }
-        
-        
-        if isEnded{
+        if isEnded || self.currentCard == self.gameCards.count  {
+            self.currentCard+=1
             var currentRule: String{
-                if language == .Russian{
-                    return"Игра окончена"
-                }else{
-                    return "The game ended"
-                }
+                return "endTheGame".localize(tableName: "Game")
             }
             let roundPlayer = ""
             let currentCardImage = UIImage(named: "321")
@@ -171,15 +166,14 @@ class Game:GameProtocol{
     var currentRule:String
         let roundPlayer = Game.players[currentPlayer]
         if (self.gameCards[currentCard] == "15_1" || self.gameCards[currentCard] == "15_2"){
-            currentRule = rulesLanguage[self.gameCards[currentCard]]!
+            currentRule = "Rule\(self.gameCards[currentCard])".localize(tableName: "Rules")
         }else{
-            currentRule = rulesLanguage[String(self.gameCards[currentCard].prefix(self.gameCards[currentCard].count-2))]!
+            currentRule = "Rule\(self.gameCards[currentCard].prefix(self.gameCards[currentCard].count-2))".localize(tableName: "Rules")
         }
         let currentCardImage = UIImage(named: self.gameCards[currentCard])
         
         currentPlayer+=1
         currentCard+=1
-        
         return (roundPlayer,currentRule,currentCardImage!)
     }
     

@@ -10,12 +10,14 @@
 		EE24C8B828C9F63A001BB161 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */; };
 		EE24C8BA28C9F951001BB161 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8B928C9F951001BB161 /* Constants.swift */; };
 		EE24C8BD28CA000A001BB161 /* LanguageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8BC28CA000A001BB161 /* LanguageTableViewCell.swift */; };
-		EE24C8C028CA3B2E001BB161 /* LanguageChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8BF28CA3B2E001BB161 /* LanguageChoose.swift */; };
 		EE24C8C228CA3B3F001BB161 /* ModeChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */; };
 		EE24C8C428CA3E25001BB161 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C328CA3E25001BB161 /* LanguageCell.swift */; };
 		EE24C8C628CA5830001BB161 /* ModeChooseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C528CA5830001BB161 /* ModeChooseCell.swift */; };
 		EE24C8CA28CAA727001BB161 /* AddPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C928CAA727001BB161 /* AddPlayersTableViewController.swift */; };
 		EE551A14286627F500173F7C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE551A13286627F500173F7C /* RulesViewController.swift */; };
+		EE59A1662986B9ED001CD274 /* Rules.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE59A1682986B9ED001CD274 /* Rules.strings */; };
+		EE59A16C298702D4001CD274 /* Game.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE59A16E298702D4001CD274 /* Game.strings */; };
+		EE75FE692954BD4000292C7E /* AddPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75FE682954BD4000292C7E /* AddPlayersViewController.swift */; };
 		EE83E38F2868980F001A6100 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83E38E2868980F001A6100 /* Game.swift */; };
 		EE9A61AB28628744003D3364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A61AA28628744003D3364 /* AppDelegate.swift */; };
 		EE9A61AD28628744003D3364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9A61AC28628744003D3364 /* SceneDelegate.swift */; };
@@ -23,11 +25,9 @@
 		EE9A61B228628744003D3364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9A61B028628744003D3364 /* Main.storyboard */; };
 		EE9A61B428628746003D3364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9A61B328628746003D3364 /* Assets.xcassets */; };
 		EE9A61B728628746003D3364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9A61B528628746003D3364 /* LaunchScreen.storyboard */; };
-		EEA5A8A928663FC70059666B /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5A8A828663FC60059666B /* Rules.swift */; };
 		EEA91A6528D1F73C00F2B0EE /* StringExtensionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA91A6428D1F73C00F2B0EE /* StringExtensionLanguage.swift */; };
 		EEA91A6928D1F82A00F2B0EE /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEA91A6B28D1F82A00F2B0EE /* Settings.strings */; };
 		EEB3411D28C95ED2003368AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB3411C28C95ED2003368AA /* AudioToolbox.framework */; };
-		EEC6769F286501D100FA7EA9 /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */; };
 		EEDC8D932869CB0C000ACDD7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC8D922869CB0C000ACDD7 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +35,16 @@
 		EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EE24C8B928C9F951001BB161 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE24C8BC28CA000A001BB161 /* LanguageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTableViewCell.swift; sourceTree = "<group>"; };
-		EE24C8BF28CA3B2E001BB161 /* LanguageChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageChoose.swift; sourceTree = "<group>"; };
 		EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChoose.swift; sourceTree = "<group>"; };
 		EE24C8C328CA3E25001BB161 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		EE24C8C528CA5830001BB161 /* ModeChooseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChooseCell.swift; sourceTree = "<group>"; };
 		EE24C8C928CAA727001BB161 /* AddPlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersTableViewController.swift; sourceTree = "<group>"; };
 		EE551A13286627F500173F7C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		EE59A1672986B9ED001CD274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Rules.strings; sourceTree = "<group>"; };
+		EE59A1692986B9EF001CD274 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Rules.strings; sourceTree = "<group>"; };
+		EE59A16D298702D4001CD274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game.strings; sourceTree = "<group>"; };
+		EE59A16F298702D6001CD274 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Game.strings; sourceTree = "<group>"; };
+		EE75FE682954BD4000292C7E /* AddPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersViewController.swift; sourceTree = "<group>"; };
 		EE83E38E2868980F001A6100 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		EE9A61A728628744003D3364 /* Seven Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seven Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9A61AA28628744003D3364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,15 +54,14 @@
 		EE9A61B328628746003D3364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9A61B628628746003D3364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9A61B828628746003D3364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EEA5A8A828663FC60059666B /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		EEA91A6328D1F47F00F2B0EE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		EEA91A6428D1F73C00F2B0EE /* StringExtensionLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionLanguage.swift; sourceTree = "<group>"; };
 		EEA91A6A28D1F82A00F2B0EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Settings.strings; sourceTree = "<group>"; };
 		EEA91A6C28D1F82B00F2B0EE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Settings.strings; sourceTree = "<group>"; };
 		EEB3411A28C95EA6003368AA /* Seven Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Seven Game.entitlements"; sourceTree = "<group>"; };
 		EEB3411C28C95ED2003368AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
 		EEDC8D922869CB0C000ACDD7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EEF14BA5294E909200B62018 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */,
-				EE24C8BF28CA3B2E001BB161 /* LanguageChoose.swift */,
 				EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */,
 				EE24C8C928CAA727001BB161 /* AddPlayersTableViewController.swift */,
+				EE75FE682954BD4000292C7E /* AddPlayersViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -114,6 +117,7 @@
 				EEB3411B28C95ED2003368AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 1;
 		};
 		EE9A61A828628744003D3364 /* Products */ = {
 			isa = PBXGroup;
@@ -143,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				EEA91A6B28D1F82A00F2B0EE /* Settings.strings */,
+				EE59A1682986B9ED001CD274 /* Rules.strings */,
+				EE59A16E298702D4001CD274 /* Game.strings */,
 			);
 			path = Localize;
 			sourceTree = "<group>";
@@ -159,8 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				EEA91A6628D1F80E00F2B0EE /* Localize */,
-				EEC6769E286501D100FA7EA9 /* LanguageSettings.swift */,
-				EEA5A8A828663FC60059666B /* Rules.swift */,
 				EE83E38E2868980F001A6100 /* Game.swift */,
 				EE24C8B928C9F951001BB161 /* Constants.swift */,
 				EEA91A6428D1F73C00F2B0EE /* StringExtensionLanguage.swift */,
@@ -227,9 +231,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE59A16C298702D4001CD274 /* Game.strings in Resources */,
 				EE9A61B728628746003D3364 /* LaunchScreen.storyboard in Resources */,
 				EEA91A6928D1F82A00F2B0EE /* Settings.strings in Resources */,
 				EE9A61B428628746003D3364 /* Assets.xcassets in Resources */,
+				EE59A1662986B9ED001CD274 /* Rules.strings in Resources */,
 				EE9A61B228628744003D3364 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,11 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE24C8C028CA3B2E001BB161 /* LanguageChoose.swift in Sources */,
 				EE24C8C428CA3E25001BB161 /* LanguageCell.swift in Sources */,
 				EE24C8CA28CAA727001BB161 /* AddPlayersTableViewController.swift in Sources */,
 				EEDC8D932869CB0C000ACDD7 /* GameViewController.swift in Sources */,
-				EEC6769F286501D100FA7EA9 /* LanguageSettings.swift in Sources */,
+				EE75FE692954BD4000292C7E /* AddPlayersViewController.swift in Sources */,
 				EE83E38F2868980F001A6100 /* Game.swift in Sources */,
 				EE24C8B828C9F63A001BB161 /* SettingsTableViewController.swift in Sources */,
 				EE9A61AF28628744003D3364 /* mainMenuViewController.swift in Sources */,
@@ -255,7 +260,6 @@
 				EE9A61AD28628744003D3364 /* SceneDelegate.swift in Sources */,
 				EE551A14286627F500173F7C /* RulesViewController.swift in Sources */,
 				EEA91A6528D1F73C00F2B0EE /* StringExtensionLanguage.swift in Sources */,
-				EEA5A8A928663FC70059666B /* Rules.swift in Sources */,
 				EE24C8BA28C9F951001BB161 /* Constants.swift in Sources */,
 				EE24C8C628CA5830001BB161 /* ModeChooseCell.swift in Sources */,
 			);
@@ -264,11 +268,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EE59A1682986B9ED001CD274 /* Rules.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE59A1672986B9ED001CD274 /* en */,
+				EE59A1692986B9EF001CD274 /* ru */,
+			);
+			name = Rules.strings;
+			sourceTree = "<group>";
+		};
+		EE59A16E298702D4001CD274 /* Game.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE59A16D298702D4001CD274 /* en */,
+				EE59A16F298702D6001CD274 /* ru */,
+			);
+			name = Game.strings;
+			sourceTree = "<group>";
+		};
 		EE9A61B028628744003D3364 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EE9A61B128628744003D3364 /* Base */,
 				EEA91A6328D1F47F00F2B0EE /* ru */,
+				EEF14BA5294E909200B62018 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -420,11 +443,12 @@
 				DEVELOPMENT_TEAM = 4FV5WJHF4V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Seven Game/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,11 +474,12 @@
 				DEVELOPMENT_TEAM = 4FV5WJHF4V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Seven Game/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

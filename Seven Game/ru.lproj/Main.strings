@@ -1,7 +1,24 @@
+/**
+ Main Menu
+ */
+
+/* Class = "UIButton"; configuration.title = "Play"; ObjectID = "D4R-yN-cwF"; */
+"D4R-yN-cwF.configuration.title" = "Играть";
+
+/* Class = "UIButton"; configuration.title = "Players"; ObjectID = "eDp-OQ-aAy"; */
+"eDp-OQ-aAy.configuration.title" = "Игроки";
+
+/* Class = "UIButton"; configuration.title = "Rules"; ObjectID = "WVF-ce-aav"; */
+"WVF-ce-aav.configuration.title" = "Правила";
+
+/* Class = "UIButton"; configuration.title = "Settings"; ObjectID = "zJB-GN-kXc"; */
+"zJB-GN-kXc.configuration.title" = "Настройки";
+
 /* Class = "UIButton"; configuration.title = "Закончить игру"; ObjectID = "MnA-lc-lCK"; */
 "MnA-lc-lCK.configuration.title" = "Закончить игру";
 
 
-/* Class = "UIButton"; configuration.title = "Rules"; ObjectID = "WVF-ce-aav"; */
-"WVF-ce-aav.configuration.title" = "Правила";
+
+
+
 

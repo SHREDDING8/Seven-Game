@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class ModeChoose: UITableViewController {
     
     var doAfterSelect: (() -> Void)?
@@ -34,9 +33,18 @@ class ModeChoose: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ModeCell", for: indexPath) as! ModeChooseCell
         
+        var currentMode:Mode = .Default
         
-        cell.ModeLabel.text? = modesArray[currentLanguage]![indexPath.row]["title"]!
-        cell.DescriptionLabel.text? = modesArray[currentLanguage]![indexPath.row]["description"]!
+        switch indexPath.row{
+            case 1:
+                currentMode = .Extended
+            default:
+                break
+        }
+        cell.ModeLabel.text? = modeKeys[currentMode]!["title"]!.localize(tableName: settingsLocalizeKeyTable)
+        cell.DescriptionLabel.text? = modeKeys[currentMode]!["description"]!.localize(tableName: settingsLocalizeKeyTable)
+        
+        
         
         if currentGameMode == Mode.init(rawValue: indexPath.row){
             cell.accessoryType = .checkmark

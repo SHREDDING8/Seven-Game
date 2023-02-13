@@ -1,0 +1,12 @@
+/* 
+  Game.strings
+  Seven Game
+
+  Created by SHREDDING on 29.01.2023.
+  
+*/
+
+"FlipCard" = "Flip the card";
+"endTheGame" = "Game Over";
+"again" = "Play again";
+"finish" = "Finish the game";

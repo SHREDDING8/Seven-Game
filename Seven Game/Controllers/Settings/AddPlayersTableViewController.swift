@@ -21,7 +21,6 @@ class AddPlayersTableViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAddPlayersTableView()
-         
     }
     
     override func viewWillDisappear(_ animated: Bool) {

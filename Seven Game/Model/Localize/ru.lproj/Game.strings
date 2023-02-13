@@ -1,0 +1,12 @@
+/* 
+  Game.strings
+  Seven Game
+
+  Created by SHREDDING on 29.01.2023.
+  
+*/
+
+"FlipCard" = "Переверни карту";
+"endTheGame" = "Игра окончена";
+"again" = "Начать заново";
+"finish" = "Закончить игру";

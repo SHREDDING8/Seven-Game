@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>D49551C2-DE2D-4855-8BD5-2887EA6C492E</key>
+		<key>3B99FB15-C323-4D3F-B2F4-2069364FFB0D</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>D49551C2-DE2D-4855-8BD5-2887EA6C492E.xcactivitylog</string>
+			<string>3B99FB15-C323-4D3F-B2F4-2069364FFB0D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>Seven_Game-hhiwmkwkqpzejxdsbvqoflxtawez</string>
 			<key>timeStartedRecording</key>
-			<real>684892917.58941603</real>
+			<real>686094215.42110205</real>
 			<key>timeStoppedRecording</key>
-			<real>684892922.52529204</real>
+			<real>686094216.69625199</real>
 			<key>title</key>
 			<string>Build target Seven Game</string>
 			<key>uniqueIdentifier</key>
-			<string>D49551C2-DE2D-4855-8BD5-2887EA6C492E</string>
+			<string>3B99FB15-C323-4D3F-B2F4-2069364FFB0D</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

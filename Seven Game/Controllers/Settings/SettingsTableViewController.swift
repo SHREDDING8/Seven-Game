@@ -10,7 +10,6 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     
     //language
-    let languageSettings = LanguageSettings()
     
     
     // MARK: - outlets
@@ -28,30 +27,23 @@ class SettingsTableViewController: UITableViewController {
     
     @IBOutlet weak var titleNavBar: UINavigationItem!
     
+    
+    @IBOutlet weak var testsettings: UITableViewCell!
+    
+    
+    
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
+        configureTableView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configureTableView()
     }
 
     
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-    }
 
 
 
@@ -83,9 +75,10 @@ class SettingsTableViewController: UITableViewController {
     private func configureTableView(){
         // background Table View
         tableView.backgroundView = UIImageView(image: backroundImage)
+        tableView.backgroundView?.contentMode = .scaleAspectFill
         
         // Nav Bar
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+
         titleNavBar.title = "titleNavBarnameSettings".localize(tableName: settingsLocalizeKeyTable)
         
         
@@ -94,7 +87,7 @@ class SettingsTableViewController: UITableViewController {
         
         // Language Cell
         languageNameOfCellLabel.text? = "labelLanguageSettings".localize(tableName: settingsLocalizeKeyTable)
-        languageLabel.text? = currentLanguage.rawValue + bracket
+        languageLabel.text? = Locale.current.identifier + bracket
         
         // Mode Cell
         gameModeNameOfCellLabel.text? = "labelModeSettings".localize(tableName: settingsLocalizeKeyTable)
@@ -108,4 +101,30 @@ class SettingsTableViewController: UITableViewController {
         
     }
     
+}
+
+
+// MARK: - delegate and datacourse
+extension SettingsTableViewController{
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 3
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if testsettings.isEqual(tableView.cellForRow(at:indexPath)){
+            if #available(iOS 15.4, *) {
+                UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        }
+    }
 }

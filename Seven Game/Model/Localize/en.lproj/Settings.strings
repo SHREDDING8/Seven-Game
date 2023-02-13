@@ -17,6 +17,9 @@
 "classicModeTitle" = "Newbie";
 "expertModeTitle" = "Expert";
 
+"classicModeDescriptionSettings" = "Have you just started drinking or are you playing purely for the company? Then this mode is what you need. Feel all the excitement, fun from your time with friends and alcohol) Deck of 36 cards, simple rules. Drink and have fun!";
+"expertModeDescriptionSettings" = "Do you consider yourself a true connoisseur of alcohol? Do you know the game firsthand? Then play by complicated rules. Now there are more cards - a deck of 52 cards. More freedom in action and more opportunities to drink) Cheers!";
+
 // Players
 "playersLabel" = "Players";
 

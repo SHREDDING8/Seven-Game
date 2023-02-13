@@ -11,12 +11,19 @@ class RulesViewController: UIViewController {
 
     //MARK: - Outlets
     
+
+    @IBOutlet weak var mainRulesView: UIView!
+    @IBOutlet weak var mainRules: UILabel!
+    
     //sections
-    @IBOutlet weak var closeButtonOutlet: UIButton!
+    
+    @IBOutlet weak var rulesLabelOutlet: UILabel!
+    
+    @IBOutlet weak var classicModeLabel: UILabel!
     
     @IBOutlet weak var extendedVersionLabelOutlet: UILabel!
     
-    @IBOutlet weak var rulesLabelOutlet: UILabel!
+    @IBOutlet weak var closeButtonOutlet: UIButton!
     
     
     //rules
@@ -53,83 +60,64 @@ class RulesViewController: UIViewController {
     
     
     //MARK: - My constants
-    var languageSettings = LanguageSettings()
     
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //set text and corner radius
-        self.rulesSet(.Russian)
-//        self.languageSettings.currentLanguage = .Russian
-
+        self.rulesSet()
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        checkLanguage()
-        
-    }
-    
-    
-    
-    //MARK: - language
-    
-    func checkLanguage(){
-            switch currentLanguage{
-            case .Russian:
-                changeRussianLanguage()
-            case .English:
-                changeEnglishLanguage()
-            }
-        
-    }
-    
-    func changeRussianLanguage(){
-        rulesLabelOutlet.text = "Правила"
-        closeButtonOutlet.setTitle("Спасибо", for: .normal)
-        extendedVersionLabelOutlet.text = "Расширенная версия"
-        self.rulesSet(.Russian)
-    }
-    func changeEnglishLanguage(){
-        rulesLabelOutlet.text = "Rules"
-        closeButtonOutlet.setTitle("Thanks", for: .normal)
-        extendedVersionLabelOutlet.text = "Extended Version"
-        self.rulesSet(.English)
-    }
-    
     
     //MARK: - My funcs
     
-    func rulesSet(_ language:Language){
+    func rulesSet(){
+        
+        rulesLabelOutlet.text = "RulesLabel".localize(tableName: "Rules")
+        
+        closeButtonOutlet.titleLabel?.text = "closeButton".localize(tableName: "Rules")
+        extendedVersionLabelOutlet.text = "classicModeTitle".localize(tableName: "Settings")
+        classicModeLabel.text = "classicModeTitle".localize(tableName: "Settings")
+        
+        
+        
+        mainRules.text = "mainRules".localize(tableName: "Rules")
+        mainRulesView.layer.masksToBounds = true
+        mainRulesView.layer.cornerRadius = 15.0
+        mainRules.shadowColor = .systemYellow
+        mainRules.shadowOffset.width = 1.0
+        mainRules.shadowOffset.height = 1.0
+        
+        mainRules.textColor = .brown
+        
+        
+        
+        
         let RulesLabels = [
-            RuleLabel2,
-            RuleLabel3,
-            RuleLabel4,
-            RuleLabel5,
-            RuleLabel6,
-            RuleLabel7,
-            RuleLabel8,
-            RuleLabel9,
-            RuleLabel10,
-            RuleLabel11,
-            RuleLabel12,
-            RuleLabel13,
-            RuleLabel14
+            RuleLabel2: "Rule2",
+            RuleLabel3: "Rule3",
+            RuleLabel4: "Rule4",
+            RuleLabel5: "Rule5",
+            RuleLabel6: "Rule6",
+            RuleLabel7: "Rule7",
+            RuleLabel8: "Rule8",
+            RuleLabel9: "Rule9",
+            RuleLabel10: "Rule10",
+            RuleLabel11: "Rule11",
+            RuleLabel12: "Rule12",
+            RuleLabel13: "Rule13",
+            RuleLabel14: "Rule14",
+            RuleLabel15_1: "Rule15_1",
+            RuleLabel15_2: "Rule15_2"
+            
         ]
         
         var indexRule = 2
         let masksToBounds = true
         let cornerRadius = 15.0
         
-        for rule in RulesLabels{
-            switch language{
-            case .Russian:
-                rule!.text = Rules.rulesRussian[String(indexRule)]
-            case .English:
-                rule!.text = Rules.rulesEnglish[String(indexRule)]
-            }
+        for (rule,key) in RulesLabels{
+            rule!.text = key.localize(tableName: "Rules")
             
             rule?.layer.masksToBounds = masksToBounds
             rule?.layer.cornerRadius = cornerRadius
@@ -142,34 +130,7 @@ class RulesViewController: UIViewController {
             indexRule+=1
         }
         
-        switch language{
-        case .Russian:
-            RuleLabel15_1.text = Rules.rulesRussian["15_1"]
-            RuleLabel15_2.text = Rules.rulesRussian["15_2"]
-            
-        case .English:
-            RuleLabel15_1.text = Rules.rulesEnglish["15_1"]
-            RuleLabel15_2.text = Rules.rulesEnglish["15_2"]
-        }
-            
-        // set text
-        
-        
-        // set corner radius
-        RuleLabel15_1.layer.masksToBounds = masksToBounds
-        RuleLabel15_2.layer.masksToBounds = masksToBounds
-        
-        RuleLabel15_1.layer.cornerRadius = cornerRadius
-        RuleLabel15_2.layer.cornerRadius = cornerRadius
-        
-        RuleLabel15_1.shadowColor = UIColor.systemYellow
-        RuleLabel15_2.shadowColor = UIColor.systemYellow
-        
-        RuleLabel15_1.shadowOffset.width = 2.0
-        RuleLabel15_2.shadowOffset.height = 2.0
     }
-    
-
     
     //MARK: - Actions
     @IBAction func closeSceneButtonAction(_ sender: UIButton) {

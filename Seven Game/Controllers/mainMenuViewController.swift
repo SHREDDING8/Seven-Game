@@ -8,16 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController{
-    //MARK: - my constants
-    let userDefaults = UserDefaults.standard
-    
-    //language
     
     //MARK: -  Outlets
     
     @IBOutlet weak var rulesButtonOutlet: UIButton!
     
-    @IBOutlet weak var buttonPlay: UIImageView!
+    @IBOutlet weak var number7Rotated: UILabel!
+    
+    @IBOutlet weak var playButtonOutlet: UIButton!
     
     
     
@@ -25,28 +23,18 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // set settings for button  play
-        playButtonSettings()
-        
-        
+        number7Rotated.layer.setAffineTransform(.init(rotationAngle: .pi))
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-    }
-    //MARK: - Language
-    
 
-    
-    
-    
-    //MARK: - play button settings
-    
-    func playButtonSettings(){
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.startGameWindowTransition))
-        self.buttonPlay.addGestureRecognizer(gesture)
     }
-    @objc func startGameWindowTransition(){
+    
+    /**
+     this function checks number of players and present alert if number is 0
+     
+     */
+    @IBAction func startGameWindowTransition(){
         var alertTitle:String
         var actionTitle:String
         
@@ -57,7 +45,7 @@ class ViewController: UIViewController{
             let alert = UIAlertController(title: alertTitle, message:nil , preferredStyle: .alert)
             let action = UIAlertAction(title: actionTitle, style: .default) { _ in
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let gameWindow = storyboard.instantiateViewController(withIdentifier: "AddPlayersTableViewController")
+                let gameWindow = storyboard.instantiateViewController(withIdentifier: "AddPlayersViewController")
                 self.navigationController?.pushViewController(gameWindow, animated: true)
             }
             alert.addAction(action)

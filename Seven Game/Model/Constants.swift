@@ -12,17 +12,9 @@ import UIKit
 
 public let settingsLocalizeKeyTable = "Settings"
 
-// Language
-public let userDefaultsKeyForLanguage = "Language"
-
-public var currentLanguage:Language = .Russian
-
-
-public let languages:[Language] = [Language.Russian,Language.English]
-
 // background
 
-public let backroundImage = UIImage(named: "background2")
+public let backroundImage = UIImage(named: "bg4")
 
 // Game Mode
 

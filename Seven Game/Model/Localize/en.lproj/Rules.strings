@@ -1,0 +1,37 @@
+/* 
+  Rules.strings
+  Seven Game
+
+  Created by SHREDDING on 29.01.2023.
+  
+*/
+"RulesLabel" = "Rules";
+"closeButton" = "Thanks";
+
+"Rule2" = "Counting down, the last two people drink on the brotherhood";
+"Rule3" = "The player chooses an opponent and plays rock-paper-scissors, the loser drinks";
+"Rule4" = "All players place their finger on the table. On the count of three, all players may remove or leave their finger on the table. Those who are outnumbered have a drink.";
+"Rule5" = "Players take a bottle and unwind it between participants. Whoever is pointed by the neck of the bottle drinks";
+"Rule6" = "You are immune! You have the right to refuse to drink once";
+"Rule7" = "All players take turns counting, starting with 1. The first player who names a number that contains the number 7 or divides by 7 - drinks";
+"Rule8" = "Skipping a move";
+"Rule9" = "Guess a category of objects. Players take turns naming one item from each category. Repeated or thoughtful- drinks";
+"Rule10" = "Think of an action that players will perform before drinking. The player who does not perform the action drinks. Actions are accumulated over the course of the game";
+
+"Rule11" = "Players are now not allowed to answer your questions until the end of the round. The player who answers your question drinks";
+"Rule12" = "All players quickly raise their hand up, the last one drinks.";
+"Rule13" = "The player drinks himself";
+"Rule14" = "The player chooses the one who will drink";
+"Rule15_1" = "Only girls drink";
+"Rule15_2" = "Only boys drink";
+
+"mainRules" = "The game 'Seven' is an interesting alcoholic game that can 'rock' any party. The rules are simple, but fascinating.
+
+
+♤ Each player picks up an alcoholic beverage and sits in a circle
+
+♤ The first player flips the card, performs the task and passes the turn to the next player
+
+♤ The player may go to the toilet, as long as he has the 'Eight' in his hands.
+
+♤ The game ends when the deck runs out, but no one forbids starting another round:)";

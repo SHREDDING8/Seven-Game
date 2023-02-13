@@ -1,0 +1,133 @@
+
+/**
+ Main Menu
+ */
+
+/* Class = "UIButton"; configuration.title = "Play"; ObjectID = "D4R-yN-cwF"; */
+"D4R-yN-cwF.configuration.title" = "Play";
+
+/* Class = "UIButton"; configuration.title = "Players"; ObjectID = "eDp-OQ-aAy"; */
+"eDp-OQ-aAy.configuration.title" = "Players";
+
+/* Class = "UIButton"; configuration.title = "Rules"; ObjectID = "WVF-ce-aav"; */
+"WVF-ce-aav.configuration.title" = "Rules";
+
+/* Class = "UIButton"; configuration.title = "Settings"; ObjectID = "zJB-GN-kXc"; */
+"zJB-GN-kXc.configuration.title" = "Settings";
+
+/* Class = "UIButton"; configuration.title = "Закончить игру"; ObjectID = "MnA-lc-lCK"; */
+"MnA-lc-lCK.configuration.title" = "Finish the game";
+
+
+
+
+
+/* Class = "UILabel"; text = "5"; ObjectID = "1Oj-Ra-55n"; */
+"1Oj-Ra-55n.text" = "5";
+
+/* Class = "UILabel"; text = "текущий язык"; ObjectID = "7he-Jb-At7"; */
+"7he-Jb-At7.text" = "текущий язык";
+
+/* Class = "UILabel"; text = "ПРАВИЛА"; ObjectID = "BVY-ij-pxg"; */
+"BVY-ij-pxg.text" = "ПРАВИЛА";
+
+/* Class = "UILabel"; text = "4"; ObjectID = "CsW-em-SZK"; */
+"CsW-em-SZK.text" = "4";
+
+
+/* Class = "UILabel"; text = "7"; ObjectID = "DZf-5B-Op6"; */
+"DZf-5B-Op6.text" = "7";
+
+/* Class = "UILabel"; text = "имя"; ObjectID = "G8y-HM-vgz"; */
+"G8y-HM-vgz.text" = "имя";
+
+/* Class = "UILabel"; text = "Players"; ObjectID = "H1i-Zf-8K0"; */
+"H1i-Zf-8K0.text" = "Players";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "IRW-QD-zkv"; */
+"IRW-QD-zkv.title" = "Edit";
+
+/* Class = "UILabel"; text = "Текущая версия"; ObjectID = "JVi-Sc-vqP"; */
+"JVi-Sc-vqP.text" = "Текущая версия";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "Jf4-Fd-s5Z"; */
+"Jf4-Fd-s5Z.text" = "12";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "L0A-xE-d20"; */
+"L0A-xE-d20.text" = "7";
+
+/* Class = "UILabel"; text = "14"; ObjectID = "L1c-th-4zT"; */
+"L1c-th-4zT.text" = "14";
+
+/* Class = "UILabel"; text = "7"; ObjectID = "Lkq-b2-ew3"; */
+"Lkq-b2-ew3.text" = "7";
+
+/* Class = "UILabel"; text = "6"; ObjectID = "MbM-9B-jcg"; */
+"MbM-9B-jcg.text" = "6";
+
+
+/* Class = "UILabel"; text = "13"; ObjectID = "MsJ-KS-DB3"; */
+"MsJ-KS-DB3.text" = "13";
+
+/* Class = "UILabel"; text = "Расширенная версия"; ObjectID = "QGj-bk-D1K"; */
+"QGj-bk-D1K.text" = "Расширенная версия";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QVn-S0-DNx"; */
+"QVn-S0-DNx.text" = "Label";
+
+/* Class = "UILabel"; text = "15_2"; ObjectID = "Qs3-jH-UED"; */
+"Qs3-jH-UED.text" = "15_2";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "RMm-Db-qDI"; */
+"RMm-Db-qDI.text" = "3";
+
+
+
+/* Class = "UILabel"; text = "11"; ObjectID = "XKm-5O-Pxh"; */
+"XKm-5O-Pxh.text" = "11";
+
+/* Class = "UINavigationItem"; title = "Players"; ObjectID = "Xeb-LO-8UJ"; */
+"Xeb-LO-8UJ.title" = "Players";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "cCe-Dg-0aR"; */
+"cCe-Dg-0aR.text" = "10";
+
+/* Class = "UILabel"; text = "Mode"; ObjectID = "dET-GM-Ddy"; */
+"dET-GM-Ddy.text" = "Mode";
+
+
+
+/* Class = "UILabel"; text = "15_1"; ObjectID = "h0H-yI-1HD"; */
+"h0H-yI-1HD.text" = "15_1";
+
+/* Class = "UILabel"; text = "режим"; ObjectID = "hi8-EL-V3M"; */
+"hi8-EL-V3M.text" = "режим";
+
+/* Class = "UILabel"; text = "Rules"; ObjectID = "hlr-hJ-88B"; */
+"hlr-hJ-88B.text" = "Rules";
+
+/* Class = "UILabel"; text = "0 человек"; ObjectID = "jaT-bb-5GD"; */
+"jaT-bb-5GD.text" = "0 человек";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "pBF-jc-NpC"; */
+"pBF-jc-NpC.title" = "Settings";
+
+/* Class = "UILabel"; text = "8"; ObjectID = "qr3-zF-ert"; */
+"qr3-zF-ert.text" = "8";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "tqx-YH-N5Q"; */
+"tqx-YH-N5Q.text" = "2";
+
+/* Class = "UIButton"; configuration.title = "Спасибо"; ObjectID = "vZ1-bd-m5e"; */
+"vZ1-bd-m5e.configuration.title" = "Спасибо";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "vfZ-Tc-404"; */
+"vfZ-Tc-404.text" = "Language";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "yic-xL-wOa"; */
+"yic-xL-wOa.text" = "9";
+
+/* Class = "UILabel"; text = "описание"; ObjectID = "zIu-b2-sFa"; */
+"zIu-b2-sFa.text" = "описание";
+
+
