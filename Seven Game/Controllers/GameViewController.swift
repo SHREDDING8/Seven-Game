@@ -33,7 +33,21 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nameView: UIView!
     
     
-    var numberOfCards:UILabel!
+    var numberOfCards:UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .right
+        label.font = UIFont(name: "Marker Felt", size: 30)
+        label.textColor = UIColor(named: "textColor")
+        label.backgroundColor = .white
+        label.textAlignment = .center
+        label.clipsToBounds = false
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 10
+        return label
+        
+        
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,12 +72,10 @@ class GameViewController: UIViewController {
         rulesView.layer.cornerRadius = 20
         
         
-        numberOfCards = UILabel()
-        numberOfCards.translatesAutoresizingMaskIntoConstraints = false
-        numberOfCards.textAlignment = .right
+        
         self.cardImage.addSubview(numberOfCards)
         NSLayoutConstraint.activate([
-            numberOfCards.leadingAnchor.constraint(equalTo: self.cardImage.leadingAnchor, constant: 30),
+            numberOfCards.leadingAnchor.constraint(equalTo: self.cardImage.trailingAnchor, constant: -100),
             numberOfCards.trailingAnchor.constraint(equalTo: self.cardImage.trailingAnchor, constant: -30),
             numberOfCards.topAnchor.constraint(equalTo: self.cardImage.topAnchor, constant: 20)
             ]

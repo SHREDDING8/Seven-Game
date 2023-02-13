@@ -55,9 +55,7 @@ class ViewController: UIViewController{
             self.present(gameWindow, animated: true)
         }
     }
-    
-
-    
+        
 }
 
 
