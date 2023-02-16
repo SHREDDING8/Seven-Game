@@ -38,8 +38,8 @@ class GameViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .right
         label.font = UIFont(name: "Marker Felt", size: 30)
-        label.textColor = UIColor(named: "textColor")
-        label.backgroundColor = .white
+        label.textColor = UIColor(named: "textColor2")
+        label.backgroundColor = UIColor(named: "BackColor")
         label.textAlignment = .center
         label.clipsToBounds = false
         label.layer.masksToBounds = true
@@ -52,14 +52,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view
-        
-//        cardImage.backgroundColor = .red
-        cardImage.clipsToBounds = false
-        cardImage.layer.shadowColor = UIColor.black.cgColor
-        cardImage.layer.shadowOpacity = 0.5
-        cardImage.layer.shadowOffset = CGSize.zero
-        cardImage.layer.shadowRadius = 10
-        
+
         cardImage.layer.masksToBounds = true
         cardImage.layer.cornerRadius = CGFloat(20)
         
@@ -72,10 +65,9 @@ class GameViewController: UIViewController {
         rulesView.layer.cornerRadius = 20
         
         
-        
         self.cardImage.addSubview(numberOfCards)
         NSLayoutConstraint.activate([
-            numberOfCards.leadingAnchor.constraint(equalTo: self.cardImage.trailingAnchor, constant: -100),
+            numberOfCards.leadingAnchor.constraint(equalTo: self.cardImage.trailingAnchor, constant: -120),
             numberOfCards.trailingAnchor.constraint(equalTo: self.cardImage.trailingAnchor, constant: -30),
             numberOfCards.topAnchor.constraint(equalTo: self.cardImage.topAnchor, constant: 20)
             ]

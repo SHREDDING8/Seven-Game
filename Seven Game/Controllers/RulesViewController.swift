@@ -83,11 +83,10 @@ class RulesViewController: UIViewController {
         mainRules.text = "mainRules".localize(tableName: "Rules")
         mainRulesView.layer.masksToBounds = true
         mainRulesView.layer.cornerRadius = 15.0
-        mainRules.shadowColor = .systemYellow
-        mainRules.shadowOffset.width = 1.0
-        mainRules.shadowOffset.height = 1.0
+        mainRules.shadowOffset.width = 0.0
+        mainRules.shadowOffset.height = 0.0
+        mainRules.textColor = UIColor(named: "textColor2")
         
-        mainRules.textColor = .brown
         
         
         
@@ -120,12 +119,11 @@ class RulesViewController: UIViewController {
             
             rule?.layer.masksToBounds = masksToBounds
             rule?.layer.cornerRadius = cornerRadius
-            rule?.shadowColor = .systemYellow
-            rule?.shadowOffset.width = 1.0
-            rule?.shadowOffset.height = 1.0
+            rule?.shadowOffset.width = 0.0
+            rule?.shadowOffset.height = 0.0
             
-            rule?.textColor = .brown
-            
+            rule?.textColor = UIColor(named: "textColor2")
+            rule?.backgroundColor = UIColor(named: "BackColor")
             indexRule+=1
         }
         

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "семеркабуби.png",
+      "filename" : "7.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "семеркабуби-1.png",
+      "filename" : "7 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "семеркабуби-2.png",
+      "filename" : "7 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
