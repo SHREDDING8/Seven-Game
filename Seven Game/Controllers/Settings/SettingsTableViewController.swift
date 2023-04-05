@@ -61,12 +61,11 @@ class SettingsTableViewController: UITableViewController {
                 configureTableView()
             }
         }else if segue.identifier == "addPlayersSegue"{
-            let destination = segue.destination as! AddPlayersTableViewController
+            let destination = segue.destination as! AddPlayersViewController
             destination.doAfterAdd = { [self] in
                 configureTableView()
             }
         }
-        
     }
     
     
@@ -87,7 +86,8 @@ class SettingsTableViewController: UITableViewController {
         
         // Language Cell
         languageNameOfCellLabel.text? = "labelLanguageSettings".localize(tableName: settingsLocalizeKeyTable)
-        languageLabel.text? = Locale.current.identifier + bracket
+        languageLabel.text? = Locale.current.identifier.prefix(2) + bracket
+
         
         // Mode Cell
         gameModeNameOfCellLabel.text? = "labelModeSettings".localize(tableName: settingsLocalizeKeyTable)

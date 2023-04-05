@@ -13,24 +13,6 @@ public enum Mode:Int {
     case Extended = 1
 }
 
-
-//let modesArray:[Language:[[String:String]]] =
-//[
-//    .Russian : [
-//        ["title" : "Любитель","description": "Ты только начал выпивать или играешь чисто за компанию? Тогда этот режим - то, что тебе нужно. Прочувствуй весь азарт, веселье от проведённого времени вместе с друзьями и алкоголем) Колода из 36 карт, простые правила. Пей и веселись!",],
-//        ["title" : "Эксперт","description": "Считаешь себя истинным ценителем алкоголя? Игра тебе уже непонаслышке знакома? тогда играй по усложнённым правилам теперь карт больше - колода из 52 карт. Больше свободы в действиях и больше возможностей выпить) Cheers!",],
-//    ],
-//
-//
-//    .English : [
-//        ["title" : "Newbie","description": "Have you just started drinking or are you playing purely for the company? Then this mode is what you need. Feel all the excitement, fun from your time with friends and alcohol) Deck of 36 cards, simple rules. Drink and have fun!",],
-//        ["title" : "Expert","description": "Do you consider yourself a true connoisseur of alcohol? Do you know the game firsthand? Then play by complicated rules. Now there are more cards - a deck of 52 cards. More freedom in action and more opportunities to drink) Cheers!",],
-//    ],
-//
-//]
-
-
-
 protocol GameProtocol{
     static var mode:Mode{get}
     
@@ -160,7 +142,7 @@ class Game:GameProtocol{
                 return "endTheGame".localize(tableName: "Game")
             }
             let roundPlayer = ""
-            let currentCardImage = UIImage(named: "321")
+            let currentCardImage = UIImage(named: "рубашка")
             return (roundPlayer,currentRule,currentCardImage!)
         }
     var currentRule:String

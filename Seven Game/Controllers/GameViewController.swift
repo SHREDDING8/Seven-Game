@@ -64,7 +64,6 @@ class GameViewController: UIViewController {
         rulesView.clipsToBounds = true
         rulesView.layer.cornerRadius = 20
         
-        
         self.cardImage.addSubview(numberOfCards)
         NSLayoutConstraint.activate([
             numberOfCards.leadingAnchor.constraint(equalTo: self.cardImage.trailingAnchor, constant: -120),

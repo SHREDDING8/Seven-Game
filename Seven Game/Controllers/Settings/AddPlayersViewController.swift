@@ -22,6 +22,8 @@ class AddPlayersViewController: UIViewController {
     
     @IBOutlet weak var number7Rotated: UILabel!
     
+    var doAfterAdd:(() ->Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -31,6 +33,11 @@ class AddPlayersViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        doAfterAdd?()
+    }
+    
+    
 
     // MARK: - Configure funcs
     fileprivate func configureTableView(){
@@ -39,12 +46,15 @@ class AddPlayersViewController: UIViewController {
     }
     
     fileprivate func configureController(){
+        
         number7Rotated.layer.setAffineTransform(.init(rotationAngle: .pi))
         
+        
+    
         navBar.title = "playersLabel".localize(tableName: settingsLocalizeKeyTable)
         editButton.title = "editButtonTitleAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
         editButton.isEnabled = Game.players.count > 0 ? true:false
-    }
+            }
     
     
     // MARK: - logic of players
@@ -62,8 +72,6 @@ class AddPlayersViewController: UIViewController {
         titleActionAdd = "titleActionAddAlertAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
         titleActioncancel = "titleActioncancelAlertAddingPlayers".localize(tableName: settingsLocalizeKeyTable)
     
-        
-        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addTextField()
         let addAction = UIAlertAction(title: titleActionAdd, style: .default) { _ in
@@ -106,7 +114,6 @@ class AddPlayersViewController: UIViewController {
         createAlert()
     }
     
-    
     @IBAction func editActionButton(_ sender: UIBarButtonItem) {
         changeTextOfEditButton(sender)
         
@@ -114,6 +121,7 @@ class AddPlayersViewController: UIViewController {
     
 }
 
+ // MARK: - UITableViewDelegate, UITableViewDataSource
 extension AddPlayersViewController:UITableViewDelegate,UITableViewDataSource{
     
     
@@ -132,15 +140,11 @@ extension AddPlayersViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     
-    // MARK: - Move
-    
-    // Override to support conditional rearranging of the table view.
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
+    // MARK: - canMoveRowAt, moveRowAt
+        func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    // Override to support rearranging the table view.
     func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let cellMove = Game.players[fromIndexPath.row]
         
@@ -149,7 +153,7 @@ extension AddPlayersViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     
-    // MARK: - Edit
+    // MARK: - editingStyle
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             Game.players.remove(at: indexPath.row)

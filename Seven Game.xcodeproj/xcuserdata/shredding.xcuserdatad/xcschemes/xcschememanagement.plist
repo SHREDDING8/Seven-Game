@@ -4,10 +4,23 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Seven Game.xcscheme_^#shared#^_</key>
+		<key>Seven Game.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>EE9A61A628628744003D3364</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEAC6B0F29A3866F004A630E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

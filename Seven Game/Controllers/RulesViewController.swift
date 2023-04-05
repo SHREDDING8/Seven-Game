@@ -74,7 +74,8 @@ class RulesViewController: UIViewController {
         
         rulesLabelOutlet.text = "RulesLabel".localize(tableName: "Rules")
         
-        closeButtonOutlet.titleLabel?.text = "closeButton".localize(tableName: "Rules")
+        closeButtonOutlet.setTitle("closeButton".localize(tableName: "Rules"), for: .normal)
+        
         extendedVersionLabelOutlet.text = "expertModeTitle".localize(tableName: "Settings")
         classicModeLabel.text = "classicModeTitle".localize(tableName: "Settings")
         

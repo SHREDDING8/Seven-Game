@@ -13,7 +13,6 @@
 		EE24C8C228CA3B3F001BB161 /* ModeChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */; };
 		EE24C8C428CA3E25001BB161 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C328CA3E25001BB161 /* LanguageCell.swift */; };
 		EE24C8C628CA5830001BB161 /* ModeChooseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C528CA5830001BB161 /* ModeChooseCell.swift */; };
-		EE24C8CA28CAA727001BB161 /* AddPlayersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE24C8C928CAA727001BB161 /* AddPlayersTableViewController.swift */; };
 		EE551A14286627F500173F7C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE551A13286627F500173F7C /* RulesViewController.swift */; };
 		EE59A1662986B9ED001CD274 /* Rules.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE59A1682986B9ED001CD274 /* Rules.strings */; };
 		EE59A16C298702D4001CD274 /* Game.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE59A16E298702D4001CD274 /* Game.strings */; };
@@ -31,6 +30,19 @@
 		EEDC8D932869CB0C000ACDD7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC8D922869CB0C000ACDD7 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EEAC6B1E29A38671004A630E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EE24C8B928C9F951001BB161 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -38,7 +50,6 @@
 		EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChoose.swift; sourceTree = "<group>"; };
 		EE24C8C328CA3E25001BB161 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
 		EE24C8C528CA5830001BB161 /* ModeChooseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChooseCell.swift; sourceTree = "<group>"; };
-		EE24C8C928CAA727001BB161 /* AddPlayersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayersTableViewController.swift; sourceTree = "<group>"; };
 		EE551A13286627F500173F7C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		EE59A1672986B9ED001CD274 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Rules.strings; sourceTree = "<group>"; };
 		EE59A1692986B9EF001CD274 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Rules.strings; sourceTree = "<group>"; };
@@ -91,7 +102,6 @@
 			children = (
 				EE24C8B728C9F639001BB161 /* SettingsTableViewController.swift */,
 				EE24C8C128CA3B3F001BB161 /* ModeChoose.swift */,
-				EE24C8C928CAA727001BB161 /* AddPlayersTableViewController.swift */,
 				EE75FE682954BD4000292C7E /* AddPlayersViewController.swift */,
 			);
 			path = Settings;
@@ -182,6 +192,7 @@
 				EE9A61A328628744003D3364 /* Sources */,
 				EE9A61A428628744003D3364 /* Frameworks */,
 				EE9A61A528628744003D3364 /* Resources */,
+				EEAC6B1E29A38671004A630E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -199,7 +210,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					EE9A61A628628744003D3364 = {
@@ -248,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE24C8C428CA3E25001BB161 /* LanguageCell.swift in Sources */,
-				EE24C8CA28CAA727001BB161 /* AddPlayersTableViewController.swift in Sources */,
 				EEDC8D932869CB0C000ACDD7 /* GameViewController.swift in Sources */,
 				EE75FE692954BD4000292C7E /* AddPlayersViewController.swift in Sources */,
 				EE83E38F2868980F001A6100 /* Game.swift in Sources */,
@@ -377,64 +387,10 @@
 			};
 			name = Debug;
 		};
-		EE9A61BA28628746003D3364 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		EE9A61BC28628746003D3364 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Seven Game/Seven Game.entitlements";
@@ -463,37 +419,6 @@
 			};
 			name = Debug;
 		};
-		EE9A61BD28628746003D3364 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Seven Game/Seven Game.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4FV5WJHF4V;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Seven Game/Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "shredding.Seven-Game";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,19 +426,17 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE9A61B928628746003D3364 /* Debug */,
-				EE9A61BA28628746003D3364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		EE9A61BB28628746003D3364 /* Build configuration list for PBXNativeTarget "Seven Game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE9A61BC28628746003D3364 /* Debug */,
-				EE9A61BD28628746003D3364 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
