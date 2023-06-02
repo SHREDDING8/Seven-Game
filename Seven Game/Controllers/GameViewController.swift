@@ -151,7 +151,20 @@ class GameViewController: UIViewController {
             startSettings()
             
         }else{
-            self.dismiss(animated: true)
+            let alert = UIAlertController(title: "Вы действительно хотите закончить игру?", message: nil, preferredStyle: .actionSheet)
+            
+            let exit = UIAlertAction(title: "Закончить игру", style: .destructive) { _ in
+                self.dismiss(animated: true)
+            }
+            
+            let cancel = UIAlertAction(title: "Отменить", style: .cancel)
+            
+            alert.addAction(exit)
+            alert.addAction(cancel)
+            
+            
+            self.present(alert, animated: true)
+            
         }
         
     }
